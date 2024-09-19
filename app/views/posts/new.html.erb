@@ -1,0 +1,8 @@
+<h1>新規投稿ページ</h1>
+<%= form_with url: "/posts", method: :post, local: true do |form| %>
+<!--①リクエスト送信！　routersにPOSTメソッドで、postへつながる導線（パス）を敷く（合致する必要あり）→ルーティング設定へ-->
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' %>
+<% end %>
+<br>
+<%= link_to '戻る', '/posts', method: :GET %>
